@@ -1,10 +1,11 @@
-Interaction Object Jasper: GOGGLES
-
-Idea:
+Interaction Object Jasper
 
 Platform game with colored platforms.
-Only platforms of certain colors are visible directly.
-Platforms of other colors are visible through a mirror/adjacent room.
 
-Player has the ability to toggle through visibilities using GOGGLES.
+Idea: GOGGLES
+
+Only platforms of one color are visible at any time.
+Player has the ability to toggle through colors using GOGGLES.
+Platforms keep their rigid body functionality when invisible. <- or not?
+
 
