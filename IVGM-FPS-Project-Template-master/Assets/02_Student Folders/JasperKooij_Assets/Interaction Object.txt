@@ -6,6 +6,26 @@ Idea: GOGGLES
 
 Only platforms of one color are visible at any time.
 Player has the ability to toggle through colors using GOGGLES.
-Platforms keep their rigid body functionality when invisible. <- or not?
+Platforms keep their rigid body functionality when invisible.
+
+Three rooms, Green Blue and Red.
+
+Green room.
+To reach the end, no goggles are required.
+Reward: Blue goggles.
+To reach the secret, Red and Green goggles are required.
+
+Blue room.
+To reach the end, the Blue goggles are required.
+Reward: Red goggles.
+To reach the secret, Green goggles are required.
+
+Red room.
+To reach the end, the Blue and Red goggles are required, plus some mid-air switching skills.
+Reward: Green goggles.
+To reach the secret, Green Blue and Red goggles are required, plus mid-air switching skills and good short-term memory.
 
 
+When all the goggles are collected, the level can be cleared by placing the goggles in the main room.
+
+In order to collect all three secrets, the player has to go back and forth between rooms.
