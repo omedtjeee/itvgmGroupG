@@ -7,19 +7,45 @@ public class Chao_Cai : MonoBehaviour
 
 
 
-    public GameObject Floor;
-    public Transform Jogador;
+    public Transform Floor;
+    Collider triggerZone;
+    float speed = 5f;
+   // bool onTop = false;
+    bool falling = false;
+    float timer;
+    float timerLenght = 1f;
+    // public Transform Player;
 
-
-    void OnTriggerEnter(Collider theCollider)
+    void Start()
     {
-        if (theCollider.CompareTag("Player")) //If player on top of the tile
+        triggerZone = GetComponent<Collider>();
+    }
+
+    void Update()
+    {
+        if (falling && timer > 0f)
         {
-            //Floor.GetComponent<Renderer>().material.color = Color.red;
-            Floor.SetActive(false);
-            //Floor.GetComponent<Animation>().CrossFade("Falling");
-             
+            Floor.Translate(Vector3.forward * Time.deltaTime * speed);
+            timer -= Time.deltaTime;
+        }
+        else if (falling && timer <= 0f)
+        {
+            falling = false;
+            timer = timerLenght;
+
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            
+               // onTop = true;
+                timer = timerLenght;
+                falling = true;
+            
         }
     }
-   
 }
+
+ 
+
+    

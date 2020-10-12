@@ -14,7 +14,7 @@ public class Fake : MonoBehaviour
     {
         if (theCollider.CompareTag("Player")) //If player on top of the tile
         {
-            //Floor.GetComponent<Renderer>().material.color = Color.red;
+            
             Floor.SetActive(false);
             
         }
