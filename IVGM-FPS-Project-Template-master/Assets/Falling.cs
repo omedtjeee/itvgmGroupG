@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class Falling : MonoBehaviour
 {
-    bool isFalling = false;
-    float downSpeed = 0;
+    public Transform thePlataform;
+    private bool Moving = false;
+    private bool PlataformGrounded = true;
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.name == "player")
-        {
-            isFalling = true;
-            Destroy(gameObject, 10);
-        }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isFalling)
+        if (Moving == true)
         {
-            downSpeed += Time.deltaTime/10;
-            transform.position = new Vector3(transform.position.x,
-                transform.position.y-downSpeed,
-                transform.position.z);
+            StartCoroutine("ChangeState");
+        }
+    }
+    void OnTriggerEnter(Collider theCollider)
+    {
+        if (theCollider.CompareTag("Player"))
+        {
+            Moving = true;
+        }
+    }
+    void OnTriggerExit(Collider theCollider)
+    {
+        if (theCollider.CompareTag("Player"))
+        {
+            Moving = false;
+
+        }
+    }
+    IEnumerator ChangeState()
+    {
+        if (PlataformGrounded == true)
+        {
+            thePlataform.GetComponent<Animation>().CrossFade("Down");
+            PlataformGrounded = false;
+            yield return new WaitForSeconds(3.0f);
         }
     }
 }
