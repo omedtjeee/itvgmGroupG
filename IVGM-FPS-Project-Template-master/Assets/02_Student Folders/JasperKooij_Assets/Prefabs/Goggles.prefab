@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1581758299443557549}
   - component: {fileID: 79175769542731733}
   - component: {fileID: 7770335029221272001}
+  - component: {fileID: -3939714948149096415}
   m_Layer: 0
   m_Name: Goggles
   m_TagString: Untagged
@@ -851,3 +852,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &-3939714948149096415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052757896564192351}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95735ab304dfdd4d9e66fd463c3578d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
