@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6267707953760344875}
   m_Layer: 0
   m_Name: PlatformRI
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
