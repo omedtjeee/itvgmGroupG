@@ -25,10 +25,6 @@ public class getKey : MonoBehaviour
         else {
             automaticDoor.key2 = true;
             Destroy(gameObject);
-        }
-       
-
-        
-       
+        }   
     }
 }
