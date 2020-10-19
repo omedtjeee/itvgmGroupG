@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7667514695880322946}
   - component: {fileID: 154712570605684960}
   - component: {fileID: -4649758904664059613}
-  - component: {fileID: 7697840801688430611}
   m_Layer: 0
   m_Name: PlatformRSQ
   m_TagString: Red
@@ -320,19 +319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6432657788699155006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c283d556fcfc54c811607dc70fd732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7697840801688430611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6432657788699155006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8c283d556fcfc54c811607dc70fd732, type: 3}
   m_Name: 

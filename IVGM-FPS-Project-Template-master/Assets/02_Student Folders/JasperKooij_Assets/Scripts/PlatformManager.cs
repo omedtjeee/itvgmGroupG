@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowGreenPlatforms : MonoBehaviour
+public class PlatformManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
