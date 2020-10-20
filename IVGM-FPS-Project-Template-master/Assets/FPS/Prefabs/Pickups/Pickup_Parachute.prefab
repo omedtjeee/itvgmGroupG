@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2620131183356007197}
   - component: {fileID: 2620131183356007194}
   - component: {fileID: 2620131183356007195}
+  - component: {fileID: 2362906508144169753}
   m_Layer: 0
   m_Name: Pickup_Parachute
   m_TagString: Untagged
@@ -47,8 +48,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.68737054, y: 0.808568, z: 0.60636455}
+  m_Center: {x: -0.0011746287, y: 0.13986397, z: 0.01643011}
 --- !u!54 &2620131183356007197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,7 +82,7 @@ MonoBehaviour:
   bobbingAmount: 0.3
   rotatingSpeed: 360
   pickupSFX: {fileID: 8300000, guid: 8dfdbc346713580429db9079ad1ff964, type: 3}
-  pickupVFXPrefab: {fileID: 18133231791472539, guid: e44fc97440f45e946a0bdbdd460acfb9,
+  pickupVFXPrefab: {fileID: 18133231791472539, guid: 85f5c9af5f70a4846ae4aa12a66d50b2,
     type: 3}
 --- !u!114 &2620131183356007195
 MonoBehaviour:
@@ -90,12 +91,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2620131183356007192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 828abdfaec1bdff4dbda622331d65ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 40
+--- !u!114 &2362906508144169753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620131183356007192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5fd1bc5d131a34791bbd68d41d568f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7296493021711450243
 GameObject:
   m_ObjectHideFlags: 0
