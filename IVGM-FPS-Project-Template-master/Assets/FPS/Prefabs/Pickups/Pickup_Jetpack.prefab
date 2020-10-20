@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesh_Jetpack
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
