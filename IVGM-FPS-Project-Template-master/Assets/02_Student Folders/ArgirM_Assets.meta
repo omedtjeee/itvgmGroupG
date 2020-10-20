@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 3ce1743fb1586ec41ac1447c8b5a6401
+=======
+<<<<<<<< HEAD:IVGM-FPS-Project-Template-master/Assets/02_Student Folders/SimoneVanDriel_Assets/Level/BaseObjects.meta
+guid: 748bd4aa7256de34da798ae843637110
+========
 guid: 9b26e8c2496484f85a10c011eaf6216d
+>>>>>>>> Argir:IVGM-FPS-Project-Template-master/Assets/02_Student Folders/ArgirM_Assets.meta
+>>>>>>> Argir
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
