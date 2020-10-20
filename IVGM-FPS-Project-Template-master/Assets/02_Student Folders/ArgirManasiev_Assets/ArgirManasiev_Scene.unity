@@ -41258,7 +41258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: 1.2=>Open Valve 2
   description: Press E While Standing Infront Of Valve To Open It
-  isOptional: 0
+  isOptional: 1
   delayVisible: 0
 --- !u!114 &1747082027
 MonoBehaviour:
@@ -48201,7 +48201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: 1.1=>Open Valve 1
   description: Press E While Standing Infront Of Valve To Open It
-  isOptional: 0
+  isOptional: 1
   delayVisible: 0
 --- !u!114 &2104745854
 MonoBehaviour:
