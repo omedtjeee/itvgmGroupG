@@ -27,6 +27,11 @@ public class GoggleSelection : MonoBehaviour
 
     }
 
+    public int getCollected()
+    {
+        return collected;
+    }
+
     // Update is called once per frame
     private void Update()
     {
@@ -114,7 +119,7 @@ public class GoggleSelection : MonoBehaviour
                 break;
             case 3:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveGreen;
-
+                DoorHandler.Instance.AllCollected();
                 break;
         }
     }
