@@ -13,9 +13,6 @@ public class DoorHandler : MonoBehaviour
     private float doorHeight = 3.0f;
 
     private bool blue = false, red = false, green = false;
-    private bool s1 = false, s2 = false, s3 = false, s4 = false;
-
-    private int sn = 0;
 
     public Material BlueLight, RedLight, GreenLight, SecretLight;
 

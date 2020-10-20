@@ -27,11 +27,6 @@ public class GoggleSelection : MonoBehaviour
 
     }
 
-    public int getCollected()
-    {
-        return collected;
-    }
-
     // Update is called once per frame
     private void Update()
     {
