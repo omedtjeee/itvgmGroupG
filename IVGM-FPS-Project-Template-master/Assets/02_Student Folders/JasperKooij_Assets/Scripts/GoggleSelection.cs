@@ -111,15 +111,15 @@ public class GoggleSelection : MonoBehaviour
         {
             case 1:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveBlue;
-
+                DoorHandler.Instance.BlueCollected();
                 break;
             case 2:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveRed;
-
+                DoorHandler.Instance.RedCollected();
                 break;
             case 3:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveGreen;
-                DoorHandler.Instance.AllCollected();
+                DoorHandler.Instance.GreenCollected();
                 break;
         }
     }

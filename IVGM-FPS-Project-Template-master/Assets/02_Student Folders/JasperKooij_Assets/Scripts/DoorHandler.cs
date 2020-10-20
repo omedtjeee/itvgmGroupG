@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,16 @@ public class DoorHandler : MonoBehaviour
     private bool openDoor = false;
 
     private float doorHeight = 3.0f;
-    
+
+    private bool blue = false, red = false, green = false;
+    private bool s1 = false, s2 = false, s3 = false, s4 = false;
+
+    private int sn = 0;
+
+    public Material BlueLight, RedLight, GreenLight, SecretLight;
+
+    List<LightController> lights;
+
     public void OnTriggerEnter(Collider other)
     {
         PlayerCharacterController pickingPlayer = other.GetComponent<PlayerCharacterController>();
@@ -43,14 +53,54 @@ public class DoorHandler : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        lights = new List<LightController>();
     }
 
-    public void AllCollected()
+    private void TurnOn (string lightName, Color m)
     {
-        allCollected = true;
+        foreach (LightController l in lights)
+        {
+            if (l.GetName() == lightName)
+                l.LightOn(m);
+        }
     }
 
+    public void RegisterLight(LightController light)
+    {
+        lights.Add(light);
+    }
 
-        
+    public void CheckAllCollected()
+    {
+        if (blue && red && green)
+            allCollected = true;
+    }
 
+    public void BlueCollected()
+    {
+        blue = true;
+        CheckAllCollected();
+        TurnOn("Blue", Color.blue);
+    }
+
+    public void RedCollected()
+    {
+        red = true;
+        CheckAllCollected();
+        TurnOn("Red", Color.red);
+    }
+
+    public void GreenCollected()
+    {
+        green = true;
+        CheckAllCollected();
+        TurnOn("Green", Color.green);
+    }
+
+    public void SecretCollected(int sIndex)
+    {
+        TurnOn(String.Format("Secret" + sIndex), Color.yellow);
+        Debug.Log(String.Format("Secret" + sIndex));
+    }
 }
