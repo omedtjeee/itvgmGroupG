@@ -147,15 +147,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.S))
-        {
-            Vector3 _yDir = transform.up * 10 ;
-            Vector3 _zDir = transform.forward * 10;
-
-            //;//(_yDir + _zDir) * Time.deltaTime);
-        }
         // check for Y kill
-        if (!isDead && transform.position.y < killHeight)
+        if(!isDead && transform.position.y < killHeight)
         {
             m_Health.Kill();
         }

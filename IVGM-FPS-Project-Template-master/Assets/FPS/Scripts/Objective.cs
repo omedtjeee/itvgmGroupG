@@ -26,17 +26,16 @@ public class Objective : MonoBehaviour
         ObjectiveManager objectiveManager = FindObjectOfType<ObjectiveManager>();
         DebugUtility.HandleErrorIfNullFindObject<ObjectiveManager, Objective>(objectiveManager, this);
         objectiveManager.RegisterObjective(this);
-        GetComponent<Objective>().enabled = false;
+
         // register this objective in the ObjectiveHUDManger
         m_ObjectiveHUDManger = FindObjectOfType<ObjectiveHUDManger>();
         DebugUtility.HandleErrorIfNullFindObject<ObjectiveHUDManger, Objective>(m_ObjectiveHUDManger, this);
         m_ObjectiveHUDManger.RegisterObjective(this);
-       
+
         // register this objective in the NotificationHUDManager
         m_NotificationHUDManager = FindObjectOfType<NotificationHUDManager>();
         DebugUtility.HandleErrorIfNullFindObject<NotificationHUDManager, Objective>(m_NotificationHUDManager, this);
         m_NotificationHUDManager.RegisterObjective(this);
-       
     }
 
     public void UpdateObjective(string descriptionText, string counterText, string notificationText)
