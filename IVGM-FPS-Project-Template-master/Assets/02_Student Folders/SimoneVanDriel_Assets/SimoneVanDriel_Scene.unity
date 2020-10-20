@@ -1860,7 +1860,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14662
+  m_Name: pb_Mesh14668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3657,6 +3657,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.032258064
       objectReference: {fileID: 0}
+    - target: {fileID: 7555257292669668287, guid: f6ee96f70c192f645b5f7d786e6b949b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 53f93d4ad88e8134782d297975149825, type: 2}
     - target: {fileID: 8014109885417308085, guid: f6ee96f70c192f645b5f7d786e6b949b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9311,6 +9316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isOptional
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
+        type: 3}
+      propertyPath: description
+      value: Get the Wings to climb upwards
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829387, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
@@ -16099,7 +16109,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14974
+  m_Name: pb_Mesh15046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16697,7 +16707,7 @@ PrefabInstance:
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -16887,7 +16897,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14780
+  m_Name: pb_Mesh14826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17792,7 +17802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2729281214287269654
 PrefabInstance:
@@ -18014,7 +18024,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2729281214538404670
 GameObject:
