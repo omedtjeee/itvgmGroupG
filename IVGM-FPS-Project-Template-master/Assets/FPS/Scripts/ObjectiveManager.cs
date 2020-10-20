@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    public List<Objective> m_Objectives = new List<Objective>();
+    List<Objective> m_Objectives = new List<Objective>();
 
     public bool AreAllObjectivesCompleted()
     {

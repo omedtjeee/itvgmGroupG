@@ -10,7 +10,7 @@ public class ObjectiveHUDManger : MonoBehaviour
     [Tooltip("Prefab for the primary objectives")]
     public GameObject secondaryObjectivePrefab;
 
-     public Dictionary<Objective, ObjectiveToast> m_ObjectivesDictionnary;
+    Dictionary<Objective, ObjectiveToast> m_ObjectivesDictionnary;
 
     void Awake()
     {
