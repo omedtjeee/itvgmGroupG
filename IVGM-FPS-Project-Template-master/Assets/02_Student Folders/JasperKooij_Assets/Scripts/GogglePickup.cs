@@ -16,12 +16,6 @@ public class GogglePickup : MonoBehaviour
         gs = GameObject.FindObjectOfType(typeof(GoggleSelection)) as GoggleSelection;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter(Collider other)
     {
         PlayerCharacterController pickingPlayer = other.GetComponent<PlayerCharacterController>();

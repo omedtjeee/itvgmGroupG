@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class GoggleSelection : MonoBehaviour
 {
-    GameObject Blue;
-    GameObject Red;
-    GameObject Green;
+    public GameObject Blue;
+    public GameObject Red;
+    public GameObject Green;
 
     public Sprite ActiveSelect;
     public Sprite InactiveSelect;
 
     public Sprite ActiveBlue, ActiveRed, ActiveGreen;
 
-    private int index = 0;
+    public Sprite DeselectBlue, DeselectRed, DeselectGreen, DeselectGoggle;
+
+    private int index = -1;
     private int collected = 0;
 
     private void Start()
@@ -31,7 +33,6 @@ public class GoggleSelection : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && collected > 0)
         {
             NextGoggle(ref index, collected);
-            // Green.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = ActiveSelect;
         }
         if(Input.GetMouseButtonDown(1))
         {
@@ -39,29 +40,63 @@ public class GoggleSelection : MonoBehaviour
         }
     }
 
+    private void SelectGoggle(int index)
+    {
+        HideArrows();
+        ShowArrow(index);
+        ShowDeselectGoggle(index);
+        PlatformManager.Instance.ShowPlatforms(index);
+    }
+
+    private void ShowDeselectGoggle(int index)
+    {
+        Sprite s = DeselectGoggle;
+        switch (index)
+        {
+            case -1:
+                break;
+            case 0:
+                s = DeselectBlue;
+                break;
+            case 1:
+                s = DeselectRed;
+                break;
+            case 2:
+                s = DeselectGreen;
+                break;
+        }
+        GameObject.FindGameObjectWithTag("DeselectGoggle").gameObject.GetComponent<Image>().sprite = s;
+    }
+
+    private void DeselectGoggles()
+    {
+        HideArrows();
+        ShowDeselectGoggle(-1);
+        PlatformManager.Instance.HidePlatforms();
+    }
+
+    private void ShowArrow(int index)
+    {
+        gameObject.transform.GetChild(index).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = ActiveSelect;
+    }
+
+    private void HideArrows()
+    {
+        gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = InactiveSelect;
+        gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = InactiveSelect;
+        gameObject.transform.GetChild(2).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = InactiveSelect;
+    }
+
     private void NextGoggle(ref int index, int collected)
     {
-        if (index >= 0)
-            gameObject.transform.GetChild(index).gameObject.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = InactiveSelect;
-
-        //pc.ShowPlatform(index+1%3);
-        PlatformController.Instance.ShowPlatform(index);
-        if (index < collected - 1)
-        {
-            index++;
-        }
-        else
-        {
-            index = 0;
-        }
-        gameObject.transform.GetChild(index).gameObject.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = ActiveSelect;
+        index = (index + 1) % collected;
+        SelectGoggle(index);
     }
 
     private void NoGoggle(ref int index)
     {
-        gameObject.transform.GetChild(index).gameObject.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = InactiveSelect;
+        DeselectGoggles();
         index = -1;
-        PlatformController.Instance.ShowPlatform(0);
     }
 
     public void Collected()
@@ -71,12 +106,15 @@ public class GoggleSelection : MonoBehaviour
         {
             case 1:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveBlue;
+
                 break;
             case 2:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveRed;
+
                 break;
             case 3:
                 gameObject.transform.GetChild(collected-1).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ActiveGreen;
+
                 break;
         }
     }
