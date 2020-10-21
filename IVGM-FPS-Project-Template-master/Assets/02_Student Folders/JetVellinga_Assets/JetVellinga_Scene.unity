@@ -4889,7 +4889,7 @@ MonoBehaviour:
   bobbingAmount: 1
   rotatingSpeed: 360
   pickupSFX: {fileID: 0}
-  pickupVFXPrefab: {fileID: 18133231791472539, guid: 85f5c9af5f70a4846ae4aa12a66d50b2,
+  pickupVFXPrefab: {fileID: 18133231791472539, guid: 5f4b45f28d377594a9d10c686c5b258b,
     type: 3}
 --- !u!43 &783566868
 Mesh:
